@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 
 	<script src="assets/libs/angular.js"></script>
+	<script src="assets/libs/angular-route.js"></script>
+
 	<script src="app/app.module.js"></script>
 	<script src="app/app.routes.js"></script>
 
@@ -20,23 +22,7 @@
 	<body ng-app="App">
 		<div class="container">
 			<div class="row">
-				<div class="filter-form" ng-controller="filterFormController">
-					<form class="form-horizontal">
-						<div class="form-group">
-							<label for="inputEmail" class="col-lg-2 control-label">Email</label>
-							<div class="col-lg-10">
-								<input type="text" class="form-control" id="inputEmail" placeholder="Email">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-lg-10 col-lg-offset-2">
-								<button type="reset" class="btn btn-default">Cancel</button>
-								<button type="submit" class="btn btn-primary">Submit</button>
-							</div>
-						</div>
-					</form>
-				</div>
+				<div ng-view></div>
 			</div>
 		</div>
 	</body>
