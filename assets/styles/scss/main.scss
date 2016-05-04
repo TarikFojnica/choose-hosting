@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import "bootstrap.min";
+@import "mixins";
+
+$color-blue-dark-1: #215682;
+$color-blue-dark-2: #2d68a1;
+$color-dark: #313131;
+$color-green: #4CAF50;
+$color-red: #DF3748;
+$color-red-2: rgba(197, 50, 61, 1);
+$color-green-river: #376763;
+$color-green-river-light: #4d8682;
+$color-white: #fff;
+$color-white-2: #f2f2f2;
+
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+.container {
+	max-width: 600px;
+}
