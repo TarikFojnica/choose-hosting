@@ -5628,9 +5628,33 @@ button.close {
 /*# sourceMappingURL=bootstrap.min.css.map */
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #4d8682; }
+  background-color: #2C333E;
+}
 
 .container {
-  max-width: 600px; }
+  max-width: 600px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.logo-container h1 {
+  position: absolute;
+  left: -200px;
+  top: 0;
+  color: #fff;
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.filter-form .form-group-wrapper {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  border-right: 5px solid red;
+}
 
 /*# sourceMappingURL=main.css.map */

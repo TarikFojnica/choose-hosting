@@ -2,22 +2,37 @@
 @import "bootstrap.min";
 @import "mixins";
 
-$color-blue-dark-1: #215682;
-$color-blue-dark-2: #2d68a1;
-$color-dark: #313131;
-$color-green: #4CAF50;
-$color-red: #DF3748;
-$color-red-2: rgba(197, 50, 61, 1);
-$color-green-river: #376763;
-$color-green-river-light: #4d8682;
-$color-white: #fff;
-$color-white-2: #f2f2f2;
+$color-primary: #2C333E;
+$colo-secondary: #D5473E;
 
 body {
 	font-family: 'Lato', sans-serif;
-	background-color: $color-green-river-light;
+	background-color: $color-primary;
 }
 
 .container {
 	max-width: 600px;
+	position: relative;
+	margin-top: 20px;
+}
+
+.logo-container {
+	h1 {
+		position: absolute;
+		left: -200px;
+		top: 0;
+		color: #fff;
+		margin-top: 0;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+}
+
+.filter-form {
+	.form-group-wrapper {
+		padding: 20px;
+		background-color: rgba(255, 255, 255, .05);
+		@include border-radius(2px);
+		border-right: 5px solid red;
+	}
 }
