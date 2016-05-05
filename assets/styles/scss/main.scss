@@ -28,11 +28,45 @@ body {
 	}
 }
 
+.icon-container {
+	i {
+		margin-top: 36px;
+		color: #00ba00;
+	}
+}
+
 .filter-form {
 	.form-group-wrapper {
 		padding: 20px;
 		background-color: rgba(255, 255, 255, .05);
 		@include border-radius(2px);
-		border-right: 5px solid red;
+		border-right: 1px solid white;
+		margin-bottom: 10px;
+
+		.submit-btn-container {
+			margin-bottom: 0;
+			button {
+				&.btn {
+					border: none;
+					@include border-radius(2px);
+					font-size: 1.2em;
+				}
+			}
+		}
+
+		.form-group {
+			label {
+				&.control-label {
+					text-transform: uppercase;
+					margin-bottom: 5px;
+					color: white;
+				}
+			}
+			
+			input {
+				@include border-radius(2px);
+				border: none;
+			}
+		}
 	}
 }
