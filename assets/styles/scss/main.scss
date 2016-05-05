@@ -1,9 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 @import "bootstrap.min";
 @import "mixins";
+@import "rzslider.min";
 
 $color-primary: #2C333E;
-$colo-secondary: #D5473E;
+$color-secondary: #D5473E;
 
 body {
 	font-family: 'Lato', sans-serif;
@@ -30,8 +31,9 @@ body {
 
 .icon-container {
 	i {
-		margin-top: 36px;
+		margin-top: 60px;
 		color: #00ba00;
+		font-size: 1.5em;
 	}
 }
 
@@ -55,10 +57,11 @@ body {
 		}
 
 		.form-group {
+			text-align: left;
 			label {
 				&.control-label {
 					text-transform: uppercase;
-					margin-bottom: 5px;
+					margin-bottom: 10px;
 					color: white;
 				}
 			}
@@ -68,5 +71,58 @@ body {
 				border: none;
 			}
 		}
+
+		ul {
+			margin: 0;
+			padding: 10px;
+			list-style-type: none;
+			border: 1px solid rgba(255,255,255,.1);
+			display: inline-block;
+
+			&.price-range {
+				li {
+					color: #fff;
+					margin: 0;
+					padding: 0;
+					display: inline-block;
+					font-size: 1.1em;
+
+					span {
+						font-weight: 600;
+						color: greenyellow;
+					}
+				}
+			}
+		}
 	}
 }
+
+.slider {
+	.rz-bubble {
+		color: white;
+
+		&.rz-limit {
+			color: darken(white, 20%);
+		}
+	}
+
+	.rz-pointer {
+		width: 22px;
+		height: 22px;
+		top: -9px;
+
+		&:after {
+			top: 9px;
+			left: 8px;
+			width: 5px;
+			height: 5px;
+		}
+	}
+
+	.rz-active {
+		&:after {
+			background-color: $color-secondary !important;
+		}
+	}
+}
+

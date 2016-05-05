@@ -1,1 +1,1 @@
-var app = angular.module('App', ['ngRoute']);
+var app = angular.module('App', ['ngRoute', 'rzModule']);
