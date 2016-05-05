@@ -2,6 +2,8 @@
 @import "bootstrap.min";
 @import "mixins";
 @import "rzslider.min";
+@import "select";
+@import "select2";
 
 $color-primary: #2C333E;
 $color-secondary: #D5473E;
@@ -31,7 +33,7 @@ body {
 
 .icon-container {
 	i {
-		margin-top: 60px;
+		margin-top: 42px;
 		color: #00ba00;
 		font-size: 1.5em;
 	}
@@ -63,18 +65,21 @@ body {
 					text-transform: uppercase;
 					margin-bottom: 10px;
 					color: white;
+					display: block;
+					text-align: left;
 				}
 			}
 			
 			input {
 				@include border-radius(2px);
 				border: none;
+				width: 100%;
 			}
 		}
 
 		ul {
 			margin: 0;
-			padding: 10px;
+			padding: 7px 10px;
 			list-style-type: none;
 			border: 1px solid rgba(255,255,255,.1);
 			display: inline-block;
@@ -94,6 +99,18 @@ body {
 				}
 			}
 		}
+
+		.btn-group {
+			.btn {
+				border: 1px solid rgba(255,255,255,.1);
+				background-color: lighten($color-primary, 20%) !important;
+				@include border-radius(0);
+			}
+
+			.active {
+				background: none !important;
+			}
+		}
 	}
 }
 
@@ -110,6 +127,7 @@ body {
 		width: 22px;
 		height: 22px;
 		top: -9px;
+		background-color: lighten($color-primary, 20%);
 
 		&:after {
 			top: 9px;
@@ -122,6 +140,54 @@ body {
 	.rz-active {
 		&:after {
 			background-color: $color-secondary !important;
+		}
+	}
+}
+
+.ui-select-container {
+	.ui-select-match {
+		input {
+			width: 100% !important;
+			background-color: lighten($color-primary, 20%);
+		}
+		
+		.ui-select-toggle {
+			background-color: lighten($color-primary, 20%);
+			border: none;
+			@include border-radius(2px);
+
+			&>.caret {
+				color: #fff;
+			}
+
+			.ui-select-placeholder {
+				color: #fff;
+				font-weight: 600;
+			}
+
+			.ui-select-match-text {
+				color: #fff;
+				font-weight: 600;
+			}
+		}
+	}
+
+	ul.ui-select-choices {
+		background-color: lighten($color-primary, 20%);
+		padding: 0;
+		@include border-radius(0);
+		border: none;
+
+
+		.ui-select-choices-row.active > a {
+			background-color: lighten($color-primary, 30%)
+		}
+
+		li {
+			a {
+				padding: 8px 10px;
+				color: #fff;
+			}
 		}
 	}
 }

@@ -1,13 +1,16 @@
-app.controller ('filterFormController', function($scope){
+app.controller ('filterFormController', function($scope, Data){
+	$scope.hosting = {};
 
-	$scope.slider = {};
-
-	$scope.slider.budget = {
-		min: 30,
-		max: 50,
+	$scope.hosting.budget = {
+		min: 5,
+		max: 20,
 		options: {
-			floor: 1,
+			floor: 0,
 			ceil: 100
 		}
 	};
+
+	$scope.hosting.bandwidth = 'unlimited';
+
+	$scope.hostingTypes = Data.getHostingTypes();
 });
