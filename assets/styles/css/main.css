@@ -6662,30 +6662,34 @@ body {
       /* stops bg color from leaking outside the border: */
       border: none;
       width: 100%; }
-  .filter-form .form-group-wrapper ul {
+  .filter-form .form-group-wrapper .selected-details p {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
     margin: 0;
-    padding: 7px 10px;
-    list-style-type: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: inline-block; }
-    .filter-form .form-group-wrapper ul.price-range li {
-      color: #fff;
-      margin: 0;
-      padding: 0;
-      display: inline-block;
-      font-size: 1.1em; }
-      .filter-form .form-group-wrapper ul.price-range li span {
-        font-weight: 600;
-        color: greenyellow; }
-  .filter-form .form-group-wrapper .btn-group .btn {
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #56647a !important;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    background-clip: padding-box;
-    /* stops bg color from leaking outside the border: */ }
-  .filter-form .form-group-wrapper .btn-group .active {
-    background: none !important; }
+    padding: 8px 13px;
+    font-size: 1em;
+    display: inline-block;
+    text-transform: uppercase;
+    margin-top: 10px; }
+    .filter-form .form-group-wrapper .selected-details p span {
+      color: greenyellow; }
+  .filter-form .form-group-wrapper .btn-group, .filter-form .form-group-wrapper .single-button {
+    width: 100%; }
+    .filter-form .form-group-wrapper .btn-group .btn, .filter-form .form-group-wrapper .single-button .btn {
+      border: none;
+      background: none;
+      -webkit-border-radius: 0;
+      border-radius: 0;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      font-size: 1.1em;
+      padding: 8px;
+      width: 50%; }
+    .filter-form .form-group-wrapper .btn-group .active, .filter-form .form-group-wrapper .single-button .active {
+      background-color: #56647a !important; }
+  .filter-form .form-group-wrapper .single-button .btn {
+    width: 100% !important;
+    border: 1px solid rgba(255, 255, 255, 0.1); }
 
 .slider .rz-bubble {
   color: white; }

@@ -3,7 +3,7 @@
 		<div class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
-					<label class="control-label">Hosting Type</label>
+					<label class="control-label">Host Type</label>
 					<ui-select ng-model="hosting.type" theme="bootstrap" title="Select">
 						<ui-select-match placeholder="Select">{{$select.selected}}</ui-select-match>
 						<ui-select-choices repeat="type in hostingTypes | filter: $select.search">
@@ -31,15 +31,11 @@
 						rz-slider-options="hosting.budget.options">
 					</rzslider>
 
-					<ul class="price-range">
-						<li>
-							From <span>${{hosting.budget.min}}</span>
-						</li>
-
-						<li>
-							to <span>${{hosting.budget.max}}</span> /month
-						</li>
-					</ul>
+					<div class="selected-details">
+						<p>
+							From <span>${{hosting.budget.min}}</span> 	to <span>${{hosting.budget.max}}</span> /month
+						</p>
+					</div>
 				</div>
 
 				<div class="col-sm-1">
@@ -55,8 +51,54 @@
 				<div class="col-sm-11">
 					<label class="control-label">Bandwidth</label>
 					<div class="btn-group">
-						<label class="btn btn-success" ng-model="hosting.bandwidth" uib-btn-radio="'unlimited'">Unlimited</label>
-						<label class="btn btn-success" ng-model="hosting.bandwidth" uib-btn-radio="'limited'">Limited</label>
+						<label class="btn btn-success" ng-model="hosting.bandwidth" uib-btn-radio="'unlimited'"><i ng-show="hosting.bandwidth == 'unlimited'" class="fa fa-check-circle" aria-hidden="true"></i> Unlimited</label>
+						<label class="btn btn-success" ng-model="hosting.bandwidth" uib-btn-radio="'limited'"><i ng-show="hosting.bandwidth == 'limited'" class="fa fa-check-circle" aria-hidden="true"></i> Limited</label>
+					</div>
+
+					<div class="selected-details">
+						<p>
+							<span>{{hosting.bandwidth}} Bandwidth</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="col-sm-1">
+					<div class="icon-container">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group-wrapper">
+			<div class="form-group">
+				<div class="col-sm-11">
+					<label class="control-label">Web Space</label>
+					<rzslider
+						class="slider"
+						rz-slider-model="hosting.webspace.min"
+						rz-slider-options="hosting.webspace.options">
+					</rzslider>
+
+					<div class="row">
+						<div class="col-md-4">
+
+							<div class="selected-details">
+								<p>
+									<span ng-hide="hosting.webspace.unlimited === 1">{{hosting.webspace.min}} GB</span>
+									<span ng-show="hosting.webspace.unlimited === 1">Unlimited</span>
+								</p>
+							</div>
+						</div>
+
+						<div class="col-md-8" ng-show="hosting.webspace.min === 100">
+							<div class="single-button">
+								<button type="button" class="btn btn-primary" ng-model="hosting.webspace.unlimited" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+									<i ng-show="hosting.webspace.unlimited === 1" class="fa fa-check-circle" aria-hidden="true"></i> I want unlimited webspace
+								</button>
+							</div>
+						</div>
 					</div>
 				</div>
 

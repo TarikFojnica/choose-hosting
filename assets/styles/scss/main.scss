@@ -77,40 +77,46 @@ body {
 			}
 		}
 
-		ul {
-			margin: 0;
-			padding: 7px 10px;
-			list-style-type: none;
-			border: 1px solid rgba(255,255,255,.1);
-			display: inline-block;
+		.selected-details {
+			p {
+				border: 1px solid rgba(255,255,255,.1);
+				color: #fff;
+				margin: 0;
+				padding: 8px 13px;
+				font-size: 1em;
+				display: inline-block;
+				text-transform: uppercase;
+				margin-top: 10px;
 
-			&.price-range {
-				li {
-					color: #fff;
-					margin: 0;
-					padding: 0;
-					display: inline-block;
-					font-size: 1.1em;
-
-					span {
-						font-weight: 600;
-						color: greenyellow;
-					}
+				span {
+					color: greenyellow;
 				}
 			}
 		}
 
-		.btn-group {
+		.btn-group, .single-button{
+			width: 100%;
 			.btn {
-				border: 1px solid rgba(255,255,255,.1);
-				background-color: lighten($color-primary, 20%) !important;
+				border: none;
+				background: none;
 				@include border-radius(0);
+				font-size: 1.1em;
+				padding: 8px;
+				width: 50%;
 			}
 
 			.active {
-				background: none !important;
+				background-color: lighten($color-primary, 20%) !important;
 			}
 		}
+
+		.single-button {
+			.btn {
+				width: 100% !important;
+				border: 1px solid rgba(255,255,255,.1);
+			}
+		}
+
 	}
 }
 
