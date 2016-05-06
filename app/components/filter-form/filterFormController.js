@@ -23,4 +23,12 @@ app.controller ('filterFormController', function($scope, Data){
 			ceil: 100
 		}
 	}
+
+	$scope.hosting.numberOfWebsites = {
+		min: 1,
+		options: {
+			floor: 1,
+			ceil: 10
+		}
+	}
 });

@@ -98,7 +98,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-8" ng-show="hosting.webspace.min === 100">
+						<div class="col-md-8" ng-show="hosting.webspace.min > 50">
 							<div class="single-button">
 								<button type="button" class="btn btn-primary" ng-model="hosting.webspace.unlimited" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
 									<i ng-show="hosting.webspace.unlimited === 1" class="fa fa-check-circle" aria-hidden="true"></i> I want unlimited webspace
@@ -119,10 +119,54 @@
 		<div class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
+					<label class="control-label">Number of Websites</label>
+					<rzslider
+						class="slider"
+						rz-slider-model="hosting.numberOfWebsites.min"
+						rz-slider-options="hosting.numberOfWebsites.options">
+					</rzslider>
+
+					<div class="row">
+						<div class="col-md-4">
+
+							<div class="selected-details">
+								<p ng-hide="hosting.numberOfWebsites.unlimited === 1">
+									At least <span>{{hosting.numberOfWebsites.min}}</span>
+								</p>
+
+								<p ng-show="hosting.numberOfWebsites.unlimited === 1">
+									<span>Unlimited</span>
+								</p>
+
+							</div>
+						</div>
+
+						<div class="col-md-8" ng-show="hosting.numberOfWebsites.min > 5">
+							<div class="single-button">
+								<button type="button" class="btn btn-primary" ng-model="hosting.numberOfWebsites.unlimited" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
+									<i ng-show="hosting.numberOfWebsites.unlimited === 1" class="fa fa-check-circle" aria-hidden="true"></i> I want unlimited number of websites
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-1">
+					<div class="icon-container">
+						<i class="fa fa-check" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="form-group-wrapper">
+			<div class="form-group">
+				<div class="col-sm-11">
 					<label class="control-label">Additional Features</label>
 					<div class="btn-group multi-button">
+						<label class="btn btn-primary" ng-model="hosting.monthlyPayments" uib-btn-checkbox>Monthly Payments</label>
 						<label class="btn btn-primary" ng-model="hosting.freeDomain" uib-btn-checkbox>Free Domain</label>
-						<label class="btn btn-primary" ng-model="hosting.cpanel" uib-btn-checkbox>cPanel</label>
+						<label class="btn btn-primary" ng-model="hosting.controlPanel" uib-btn-checkbox>Control Panel</label>
 						<label class="btn btn-primary" ng-model="hosting.oneClickInstalls" uib-btn-checkbox>One click installs</label>
 					</div>
 				</div>
