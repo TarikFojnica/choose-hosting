@@ -4,9 +4,8 @@ app.factory('Data', function () {
 			var hostingTypes = [
 				'Shared',
 				'VPS',
-				'Dedicated',
 				'Wordpress',
-				'I don\'t know'
+				'Not Sure'
 			];
 			return hostingTypes;
 		}

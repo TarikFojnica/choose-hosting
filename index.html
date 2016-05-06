@@ -24,16 +24,23 @@
 </head>
 	<body ng-app="App">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-container">
-						<h1>
-							Choose <br>
-							Your <br>
-							Hosting
-						</h1>
+			<header>
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="logo-container">
+							<h1>Choose Your Hosting</h1>
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<ul class="pull-right">
+							<li><a target="_blank" href="https://github.com/TarikFojnica/choose-hosting"><i class="fa fa-github" aria-hidden="true"></i> Github</a></li>
+						</ul>
 					</div>
 				</div>
+			</header>
+
+			<div class="row">
 				<div ng-view></div>
 			</div>
 		</div>

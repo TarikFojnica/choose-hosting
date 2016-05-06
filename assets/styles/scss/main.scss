@@ -15,27 +15,47 @@ body {
 
 .container {
 	max-width: 600px;
-	position: relative;
 	margin-top: 20px;
 }
 
-.logo-container {
-	h1 {
-		position: absolute;
-		left: -200px;
-		top: 0;
-		color: #fff;
-		margin-top: 0;
-		text-transform: uppercase;
-		font-weight: 600;
+header {
+	.logo-container {
+
+		h1 {
+			color: #fff;
+			margin-top: 0;
+			text-transform: uppercase;
+			font-weight: 600;
+			font-size: 1.2em;
+			border-bottom: 1px solid rgba(greenyellow, .2);
+			display: inline-block;
+			padding-bottom: 5px;
+		}
+	}
+
+	ul {
+		li {
+			a {
+				color: #fff;
+
+				&:hover {
+					color: greenyellow;
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 
 .icon-container {
 	i {
 		margin-top: 42px;
-		color: #00ba00;
+		color: rgba(255,255,255,.5);
 		font-size: 1.5em;
+
+		&:hover {
+			color: rgba(255,255,255,.8);
+		}
 	}
 }
 
@@ -102,10 +122,16 @@ body {
 				padding: 7px 8px;
 				width: 50%;
 				border: 1px solid rgba(255,255,255,.1);
+				color: rgba(255,255,255,.4);
+
+				&:hover {
+					border-color: rgba(255,255,255,.4);
+				}
 			}
 
 			.active {
 				background-color: lighten($color-primary, 20%) !important;
+				color: #fff;
 			}
 		}
 
@@ -121,6 +147,10 @@ body {
 				width: 100%;
 				margin-bottom: 10px;
 				text-align: left;
+
+				&:focus {
+					outline: none;
+				}
 			}
 		}
 

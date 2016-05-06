@@ -1,5 +1,7 @@
 <div class="filter-form">
 	<form class="form-horizontal">
+
+		<!--Host type-->
 		<div class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
@@ -20,16 +22,17 @@
 
 				<div class="col-sm-1">
 					<div class="icon-container">
-						<i class="fa fa-check" aria-hidden="true"></i>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!--Budget-->
 		<div class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
-					<label class="control-label">Budget</label>
+					<label class="control-label">Budget per month</label>
 					<rzslider
 						class="slider"
 						rz-slider-model="hosting.budget.min"
@@ -46,12 +49,13 @@
 
 				<div class="col-sm-1">
 					<div class="icon-container">
-						<i class="fa fa-check" aria-hidden="true"></i>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!--Bandwidth-->
 		<div class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
@@ -70,13 +74,14 @@
 
 				<div class="col-sm-1">
 					<div class="icon-container">
-						<i class="fa fa-check" aria-hidden="true"></i>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
 					</div>
 
 				</div>
 			</div>
 		</div>
 
+		<!--Web space-->
 		<div class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
@@ -98,7 +103,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-8" ng-show="hosting.webspace.min > 50">
+						<div class="col-md-8">
 							<div class="single-button">
 								<button type="button" class="btn btn-primary" ng-model="hosting.webspace.unlimited" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
 									<i ng-show="hosting.webspace.unlimited === 1" class="fa fa-check-circle" aria-hidden="true"></i> I want unlimited webspace
@@ -110,12 +115,13 @@
 
 				<div class="col-sm-1">
 					<div class="icon-container">
-						<i class="fa fa-check" aria-hidden="true"></i>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!--Number of websites-->
 		<div class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
@@ -141,7 +147,7 @@
 							</div>
 						</div>
 
-						<div class="col-md-8" ng-show="hosting.numberOfWebsites.min > 5">
+						<div class="col-md-8">
 							<div class="single-button">
 								<button type="button" class="btn btn-primary" ng-model="hosting.numberOfWebsites.unlimited" uib-btn-checkbox btn-checkbox-true="1" btn-checkbox-false="0">
 									<i ng-show="hosting.numberOfWebsites.unlimited === 1" class="fa fa-check-circle" aria-hidden="true"></i> I want unlimited number of websites
@@ -153,12 +159,76 @@
 
 				<div class="col-sm-1">
 					<div class="icon-container">
-						<i class="fa fa-check" aria-hidden="true"></i>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!--Ram-->
+		<div class="form-group-wrapper">
+			<div class="form-group">
+				<div class="col-sm-11">
+					<label class="control-label">RAM</label>
+					<rzslider
+						class="slider"
+						rz-slider-model="hosting.ram.min"
+						rz-slider-options="hosting.ram.options">
+					</rzslider>
+
+					<div class="row">
+						<div class="col-md-4">
+
+							<div class="selected-details">
+								<p>
+									At least <span>{{hosting.ram.min}} GB</span>
+								</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="col-sm-1">
+					<div class="icon-container">
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--CPU-->
+		<div class="form-group-wrapper">
+			<div class="form-group">
+				<div class="col-sm-11">
+					<label class="control-label">Number of Cores</label>
+					<rzslider
+						class="slider"
+						rz-slider-model="hosting.cpu.min"
+						rz-slider-options="hosting.cpu.options">
+					</rzslider>
+
+					<div class="row">
+						<div class="col-md-4">
+
+							<div class="selected-details">
+								<p>
+									At least <span>{{hosting.cpu.min}} Cores</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-sm-1">
+					<div class="icon-container">
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--Additional features-->
 		<div class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
@@ -173,14 +243,14 @@
 
 				<div class="col-sm-1">
 					<div class="icon-container">
-						<i class="fa fa-check" aria-hidden="true"></i>
+						<i class="fa fa-question-circle" aria-hidden="true"></i>
 					</div>
 
 				</div>
 			</div>
 		</div>
 
-
+		<!--Submit btn-->
 		<div class="form-group-wrapper">
 			<div class="form-group submit-btn-container">
 				<div class="col-lg-12">
