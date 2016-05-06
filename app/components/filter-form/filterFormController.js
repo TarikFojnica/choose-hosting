@@ -3,6 +3,7 @@ app.controller ('filterFormController', function($scope, Data){
 	$scope.hosting = {};
 
 	$scope.hostingTypes = Data.getHostingTypes();
+	$scope.hosting.type = $scope.hostingTypes[0];
 
 	$scope.hosting.budget = {
 		min: 5,

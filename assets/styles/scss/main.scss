@@ -81,12 +81,11 @@ body {
 			p {
 				border: 1px solid rgba(255,255,255,.1);
 				color: #fff;
-				margin: 0;
 				padding: 8px 13px;
 				font-size: 1em;
 				display: inline-block;
 				text-transform: uppercase;
-				margin-top: 10px;
+				margin: 10px 0 0 0;
 
 				span {
 					color: greenyellow;
@@ -97,12 +96,12 @@ body {
 		.btn-group, .single-button{
 			width: 100%;
 			.btn {
-				border: none;
 				background: none;
 				@include border-radius(0);
 				font-size: 1.1em;
-				padding: 8px;
+				padding: 7px 8px;
 				width: 50%;
+				border: 1px solid rgba(255,255,255,.1);
 			}
 
 			.active {
@@ -113,7 +112,15 @@ body {
 		.single-button {
 			.btn {
 				width: 100% !important;
-				border: 1px solid rgba(255,255,255,.1);
+				margin-top: 10px;
+			}
+		}
+
+		.multi-button {
+			.btn {
+				width: 100%;
+				margin-bottom: 10px;
+				text-align: left;
 			}
 		}
 
