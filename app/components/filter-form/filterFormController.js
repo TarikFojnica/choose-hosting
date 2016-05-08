@@ -95,11 +95,27 @@ app.controller ('filterFormController', function($scope, Data, _){
 	$scope.getData = function () {
 		Data.getHostingResults($scope.hosting.type.call)
 		.then(function(data) {
-				console.log(data);
-			_.each(data, alert);
+				console.log("All the data" + data);
+				if ($scope.hosting.type.call === 'shared') {
+					$scope.results = _.filter(data, function(data){
+						return (
+						data.price <= $scope.hosting.budget.max
+						&& data.bandwidth >= $scope.hosting.bandwidth.min
+ 						);
+					});
+				}
+
+				else if ($scope.hosting.type.call === 'vps') {
+
+				}
+
+				else if ($scope.hosting.type.call === 'wordpress') {
+
+				}
+
+				console.log("Filtered data" + $scope.results);
 
 			}, function(error) {
-				// promise rejected, could log the error with: console.log('error', error);
 				console.log('One big error' + error)
 			});
 		}

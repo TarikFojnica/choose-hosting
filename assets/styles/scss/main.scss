@@ -235,3 +235,14 @@ header {
 	}
 }
 
+.results {
+	ul {
+		color: white;
+		width: 50%;
+		float: left;
+		background-color: red;
+		border-right: 2px solid $color-primary;
+		@include border-radius(2px)
+	}
+}
+

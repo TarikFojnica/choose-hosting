@@ -1,15 +1,27 @@
 [
   {
     "host": "Hostgator",
-    "plan": "Tiny Plan",
-    "price": 15,
-    "url": "www.test.com"
+    "logoUrl": "http://yogeshkhetani.com/wp-content/uploads/2014/08/hostgator-logo.jpeg",
+    "plan": "Hatchling Plan",
+    "price": 7.16,
+    "freeDomain": true,
+    "bandwidth": 9999999,
+    "bandwidthText": "Unlimited",
+    "diskSpace": 9999999,
+    "diskSpaceText": "Unlimited",
+    "url": "http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=Nightcomer"
   },
 
   {
-    "host": "HostMonster",
-    "plan": "Big",
-    "price": 50,
-    "url": "www.test.com"
+    "host": "Hostgator",
+    "logoUrl": "http://yogeshkhetani.com/wp-content/uploads/2014/08/hostgator-logo.jpeg",
+    "plan": "Hatchling Plan",
+    "price": 7.16,
+    "freeDomain": true,
+    "bandwidth": 9999999,
+    "bandwidthText": "Unlimited",
+    "diskSpace": 9999999,
+    "diskSpaceText": "Unlimited",
+    "url": "http://secure.hostgator.com/~affiliat/cgi-bin/affiliates/clickthru.cgi?id=Nightcomer"
   }
 ]
