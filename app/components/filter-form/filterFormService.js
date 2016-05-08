@@ -1,35 +1,40 @@
-app.factory('Data', function () {
+app.factory('Data', function ($http, $q) {
 	return {
 		getHostingTypes: function() {
 			var hostingTypes = [
-				'Shared',
-				'VPS',
-				'Wordpress',
-				'Not Sure'
+				{
+					'name': 'Shared', 'call': 'shared'
+				},
+
+				{
+					'name': 'VPS', 'call': 'vps'
+				},
+
+				{
+					'name': 'Wordpress', 'call': 'wordpress'
+				},
+
+				{
+					'name': 'Not Sure', 'call': 'shared'
+				}
 			];
 			return hostingTypes;
 		},
 
-		getHostingResults: function(type) {
-			if (type === 'VPS') {
-				console.log('It\'s VPS')
-			}
+		getHostingResults: function(dataSource) {
+			return $http.get('/app/components/filter-form/data/'+ dataSource + '.json')
+				.then(function(response) {
+					if (typeof response.data === 'object') {
+						return response.data;
+					} else {
+						// invalid response
+						return $q.reject(response.data);
+					}
 
-			else if (type === 'Shared') {
-				console.log('It\'s Shared')
-			}
-
-			else if (type === 'Wordpress') {
-				console.log('It\'s Wordpress')
-			}
-
-			else if (type === 'Not Sure') {
-				console.log('It\'s not sure')
-			}
-
-			else {
-				console.log('We have an error :/');
-			}
+				}, function(response) {
+					// something went wrong
+					return $q.reject(response.data);
+				});
 		}
 	};
 });

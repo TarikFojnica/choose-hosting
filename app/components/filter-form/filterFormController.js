@@ -93,6 +93,13 @@ app.controller ('filterFormController', function($scope, Data){
 	}
 
 	$scope.getData = function () {
-		Data.getHostingResults($scope.hosting.type);
-	}
+		Data.getHostingResults($scope.hosting.type.call)
+		.then(function(data) {
+				// promise fulfilled
+
+			}, function(error) {
+				// promise rejected, could log the error with: console.log('error', error);
+				console.log('One big error' + error)
+			});
+		}
 });

@@ -7,15 +7,15 @@
 				<div class="col-sm-11">
 					<label class="control-label">Host Type</label>
 					<ui-select ng-model="hosting.type" theme="bootstrap" title="Select">
-						<ui-select-match placeholder="Select">{{$select.selected}}</ui-select-match>
+						<ui-select-match placeholder="Select">{{$select.selected.name}}</ui-select-match>
 						<ui-select-choices repeat="type in hostingTypes | filter: $select.search">
-							<span>{{type}}</span>
+							<span>{{type.name}}</span>
 						</ui-select-choices>
 					</ui-select>
 
 					<div class="selected-details">
 						<p>
-							<span>{{hosting.type}}</span>
+							<span>{{hosting.type.name}}</span>
 						</p>
 					</div>
 				</div>
@@ -136,7 +136,7 @@
 		</div>
 
 		<!--Number of websites-->
-		<div ng-show="hosting.type !== 'VPS'" class="form-group-wrapper">
+		<div ng-show="hosting.type.call !== 'vps'" class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
 					<label class="control-label">Number of Websites</label>
@@ -180,7 +180,7 @@
 		</div>
 
 		<!--Ram-->
-		<div ng-show="hosting.type == 'VPS'" class="form-group-wrapper">
+		<div ng-show="hosting.type.call == 'vps'" class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
 					<label class="control-label">RAM</label>
@@ -215,7 +215,7 @@
 		</div>
 
 		<!--CPU-->
-		<div ng-show="hosting.type == 'VPS'" class="form-group-wrapper">
+		<div ng-show="hosting.type.call == 'vps'" class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
 					<label class="control-label">CPU</label>
@@ -246,7 +246,7 @@
 		</div>
 
 		<!--Additional features-->
-		<div ng-show="hosting.type !== 'VPS'" class="form-group-wrapper">
+		<div ng-show="hosting.type.call !== 'vps'" class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
 					<label class="control-label">Additional Features</label>
