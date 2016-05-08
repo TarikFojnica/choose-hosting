@@ -1,4 +1,4 @@
-app.controller ('filterFormController', function($scope, Data){
+app.controller ('filterFormController', function($scope, Data, _){
 	//initialize hosting object
 	$scope.hosting = {};
 
@@ -95,7 +95,8 @@ app.controller ('filterFormController', function($scope, Data){
 	$scope.getData = function () {
 		Data.getHostingResults($scope.hosting.type.call)
 		.then(function(data) {
-				// promise fulfilled
+				console.log(data);
+			_.each(data, alert);
 
 			}, function(error) {
 				// promise rejected, could log the error with: console.log('error', error);
