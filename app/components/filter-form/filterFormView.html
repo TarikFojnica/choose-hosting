@@ -1,5 +1,5 @@
 <div class="filter-form">
-	<form class="form-horizontal">
+	<form class="form-horizontal" ng-submit="getData()">
 
 		<!--Host type-->
 		<div class="form-group-wrapper">
@@ -246,7 +246,7 @@
 		</div>
 
 		<!--Additional features-->
-		<div class="form-group-wrapper">
+		<div ng-show="hosting.type !== 'VPS'" class="form-group-wrapper">
 			<div class="form-group">
 				<div class="col-sm-11">
 					<label class="control-label">Additional Features</label>
