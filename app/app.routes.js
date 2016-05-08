@@ -6,4 +6,6 @@ app.config(function($routeProvider) {
 			templateUrl : 'app/components/filter-form/filterFormView.html',
 			controller  : 'filterFormController'
 		})
+
+		.otherwise('/');
 });

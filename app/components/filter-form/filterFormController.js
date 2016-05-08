@@ -4,6 +4,8 @@ app.controller ('filterFormController', function($scope, Data){
 
 	$scope.hostingTypes = Data.getHostingTypes();
 	$scope.hosting.type = $scope.hostingTypes[0];
+	console.log($scope.hosting.type);
+
 
 	$scope.hosting.budget = {
 		min: 5,
@@ -17,9 +19,15 @@ app.controller ('filterFormController', function($scope, Data){
 		}
 	};
 
-	$scope.hosting.bandwidth = 'unlimited';
+	$scope.hosting.bandwidth = {
+		min: 10,
+		options: {
+			floor: 1,
+			ceil: 1000
+		}
+	};
 
-	$scope.hosting.webspace = {
+	$scope.hosting.diskSpace = {
 		min: 10,
 		options: {
 			floor: 1,
