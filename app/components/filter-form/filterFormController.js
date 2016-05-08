@@ -39,9 +39,10 @@ app.controller ('filterFormController', function($scope, Data){
 		min: 1,
 		options: {
 			floor: 0,
-			stepsArray: [0.256, 0.512, 1, 2, 4, 8]
+			stepsArray: [256, 512, 1, 2, 4, 8, 16],
 		}
-	}
+	};
+	watchRam();
 
 	$scope.hosting.cpu = {
 		min: 2,
@@ -49,5 +50,39 @@ app.controller ('filterFormController', function($scope, Data){
 			floor: 1,
 			ceil: 8
 		}
+	};
+
+	function watchRam() {
+		$scope.$watch('hosting.ram.min', function() {
+			switch ($scope.hosting.ram.min) {
+				case 0:
+					$scope.hosting.ram.final = 256;
+					break;
+
+				case 1:
+					$scope.hosting.ram.final = 512;
+					break;
+
+				case 2:
+					$scope.hosting.ram.final = 1;
+					break;
+
+				case 3:
+					$scope.hosting.ram.final = 2;
+					break;
+
+				case 4:
+					$scope.hosting.ram.final = 4;
+					break;
+
+				case 5:
+					$scope.hosting.ram.final = 8;
+					break;
+
+				case 6:
+					$scope.hosting.ram.final = 16;
+					break;
+			}
+		});
 	}
 });

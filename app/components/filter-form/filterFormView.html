@@ -181,7 +181,10 @@
 
 							<div class="selected-details">
 								<p>
-									At least <span>{{hosting.ram.min}} GB</span>
+									At least <span>{{hosting.ram.final}}
+									<span ng-show="hosting.ram.final > 16">MB</span>
+									<span ng-hide="hosting.ram.final > 16">GB</span>
+								</span>
 								</p>
 							</div>
 						</div>
