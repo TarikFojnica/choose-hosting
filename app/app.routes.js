@@ -7,5 +7,10 @@ app.config(function($routeProvider) {
 			controller  : 'filterFormController'
 		})
 
+		.when('/results', {
+			templateUrl : 'app/components/results/resultsView.html',
+			controller  : 'resultsController'
+		})
+
 		.otherwise('/');
 });

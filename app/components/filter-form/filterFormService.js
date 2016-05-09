@@ -22,7 +22,7 @@ app.factory('Data', function ($http, $q) {
 		},
 
 		getHostingResults: function(dataSource) {
-			return $http.get('/choose-hosting/data/' + dataSource + '.json')
+			return $http.get('/hosting-filter/data/' + dataSource + '.json')
 				.then(function(response) {
 					if (typeof response.data === 'object') {
 						return response.data;

@@ -1,4 +1,4 @@
-app.controller ('filterFormController', function($scope, Data, _){
+app.controller ('filterFormController', function($scope, $rootScope, Data, _){
 	//initialize hosting object
 	$scope.hosting = {};
 
@@ -45,7 +45,7 @@ app.controller ('filterFormController', function($scope, Data, _){
 		min: 1,
 		options: {
 			floor: 0,
-			stepsArray: [256, 512, 1, 2, 4, 8, 16],
+			stepsArray: [256, 512, 1, 2, 4, 8, 16]
 		}
 	};
 	watchRam();
@@ -97,7 +97,7 @@ app.controller ('filterFormController', function($scope, Data, _){
 		.then(function(data) {
 				console.log("All the data" + data);
 				if ($scope.hosting.type.call === 'shared') {
-					$scope.results = _.filter(data, function(data){
+					$rootScope.results = _.filter(data, function(data){
 						return (
 						data.price <= $scope.hosting.budget.max
 						&& data.bandwidth >= $scope.hosting.bandwidth.min

@@ -6756,15 +6756,10 @@ header ul li a {
     padding: 8px 10px;
     color: #fff; }
 
-.results ul {
-  color: white;
-  width: 50%;
-  float: left;
-  background-color: red;
-  border-right: 2px solid #2C333E;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */ }
+.results .results-element {
+  background-color: red; }
+  .results .results-element .host-logo img {
+    width: 100%;
+    padding: 10px; }
 
 /*# sourceMappingURL=main.css.map */

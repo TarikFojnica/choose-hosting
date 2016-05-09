@@ -236,13 +236,14 @@ header {
 }
 
 .results {
-	ul {
-		color: white;
-		width: 50%;
-		float: left;
+	.results-element {
 		background-color: red;
-		border-right: 2px solid $color-primary;
-		@include border-radius(2px)
+		.host-logo {
+			img {
+				width: 100%;
+				padding: 10px;
+			}
+		}
 	}
 }
 
