@@ -6757,9 +6757,42 @@ header ul li a {
     color: #fff; }
 
 .results .results-element {
-  background-color: red; }
-  .results .results-element .host-logo img {
-    width: 100%;
-    padding: 10px; }
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding: 5px 10px; }
+  .results .results-element .host-logo {
+    text-align: center; }
+    .results .results-element .host-logo p {
+      margin-bottom: 0;
+      color: rgba(173, 255, 47, 0.2);
+      font-size: 1.1em;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 5px; }
+      .results .results-element .host-logo p span {
+        color: greenyellow; }
+    .results .results-element .host-logo img {
+      width: 100%;
+      padding: 10px; }
+  .results .results-element .details table tbody tr td {
+    border: none;
+    font-size: 1.05em; }
+    .results .results-element .details table tbody tr td.key {
+      color: rgba(255, 255, 255, 0.8);
+      text-align: left; }
+    .results .results-element .details table tbody tr td.value {
+      color: #fff;
+      text-align: right; }
+  .results .results-element .details a.btn {
+    display: block;
+    border: none;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-clip: padding-box;
+    /* stops bg color from leaking outside the border: */ }
 
 /*# sourceMappingURL=main.css.map */

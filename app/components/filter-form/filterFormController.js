@@ -97,7 +97,7 @@ app.controller ('filterFormController', function($scope, $rootScope, Data, _){
 		.then(function(data) {
 				console.log("All the data" + data);
 				if ($scope.hosting.type.call === 'shared') {
-					$rootScope.results = _.filter(data, function(data){
+					Data.results = _.filter(data, function(data){
 						return (
 						data.price <= $scope.hosting.budget.max
 						&& data.bandwidth >= $scope.hosting.bandwidth.min

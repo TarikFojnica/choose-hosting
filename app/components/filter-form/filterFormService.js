@@ -1,4 +1,5 @@
 app.factory('Data', function ($http, $q) {
+
 	return {
 		getHostingTypes: function() {
 			var hostingTypes = [
@@ -35,6 +36,9 @@ app.factory('Data', function ($http, $q) {
 					// something went wrong
 					return $q.reject(response.data);
 				});
-		}
-	};
+		},
+
+		//we'll bind data to this service so it can be accessible by all controllers
+		hostingResults: {}
+	}
 });
